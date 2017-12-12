@@ -10,7 +10,7 @@
 
 		第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
 
-		第二步，使用命令git commit，完成。
+		第二步，使用命令git commit -m "描述"，完成。
 
 5. git log 可以查看版本库的历史记录，git log命令显示从最近到最远的提交日志，我们可以看到3次提交， 	最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file。
 

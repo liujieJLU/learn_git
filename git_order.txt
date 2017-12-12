@@ -12,8 +12,18 @@
 
 		第二步，使用命令git commit -m "描述"，完成。
 
+	add后添加到了存储区，commit才会被提交，如果add后还对文件进行了修改，commit只会提交第一次修改的
+
+	内容而不会修改第二次的内容，git diff HEAD -- readme.txt可以查看工作区和版本库的区别
+
 5. git log 可以查看版本库的历史记录，git log命令显示从最近到最远的提交日志，我们可以看到3次提交， 	最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file。
 
 6. git reset --hard commit_id 可以将版本会退到某个版本，如 git reset --hard 3628164，
 
 7. git reflog 可以记录你的每一次指令
+
+8.命令git checkout -- readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
+
+		一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+		一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。

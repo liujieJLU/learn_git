@@ -10,3 +10,5 @@ select * from git
 我在2017-12-6 14:57:04进行了第二次修改
 
 学习管理修改新增的内容
+
+create a new branch is quick.

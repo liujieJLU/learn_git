@@ -12,5 +12,5 @@ select * from git
 学习管理修改新增的内容
 
 
-create a new branch is quick and simple
+create a new branch is quick & simple.
 

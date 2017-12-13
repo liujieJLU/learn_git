@@ -15,7 +15,7 @@ select * from git
 
 create a new branch is quick and simple.
 
-add merge
+我在学习bug 分支
 
 add merge2
 

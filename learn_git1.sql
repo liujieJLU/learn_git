@@ -21,3 +21,5 @@ add merge2
 
 Git is a free software
 
+学习bug分支时新增的内容
+

@@ -16,7 +16,9 @@
 
 	内容而不会修改第二次的内容，git diff HEAD -- readme.txt可以查看工作区和版本库的区别
 
-5. git log 可以查看版本库的历史记录，git log命令显示从最近到最远的提交日志，我们可以看到3次提交， 	最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file。
+5. git log 可以查看版本库的历史记录，git log命令显示从最近到最远的提交日志，我们可以看到3次提交，
+
+ 	最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file。
 
 6. git reset --hard commit_id 可以将版本会退到某个版本，如 git reset --hard 3628164，
 
@@ -44,7 +46,9 @@
 
 	查看分支合并情况：git log --graph --pretty=oneline --abbrev-commit
 
-10. git stash 将当前未完成的工作暂存（比如当前工作未做完，需要提前修改一个bug时）
+10. git stash 将当前未完成的工作暂存（比如当前工作未做完，需要提前修改一个bug，并且还不能add时，
+
+	也就不能切换分区了，如果已经 add那就说明可以直接切换分支，而不需要暂存了）
 	
 	git stash list 查看被隐藏暂存的工作区
 
@@ -58,3 +62,40 @@
 
 	git stash apply stash@{0}
 
+11. git 的多人协作：
+
+	查看远程库信息，使用git remote -v；
+
+	本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+	从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+
+	在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name， 本地和远程分支的名称最好一致；
+
+	建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+	从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+12. git 的标签创建
+
+	命令git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+
+	git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+
+	git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
+
+	命令git tag可以查看所有标签。
+
+	命令git push origin <tagname>可以推送一个本地标签；
+
+	命令git push origin --tags可以推送全部未推送过的本地标签；
+
+	命令git tag -d <tagname>可以删除一个本地标签；
+
+	命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+
+13. 忽略特殊文件：	
+	
+	忽略某些文件时，需要编写.gitignore；
+
+	.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！

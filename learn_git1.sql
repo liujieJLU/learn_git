@@ -19,3 +19,5 @@ add merge
 
 add merge2
 
+Git is a free software
+
